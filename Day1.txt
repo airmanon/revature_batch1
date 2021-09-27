@@ -1,0 +1,241 @@
+1) Java
+2) Database (SQL)
+3) Adv SQL 
+4) Front End
+5) Angular
+6) Spring/Web Service
+7) Automation Testing/AWS
+8-10) Project 3 
+
+
+1) JDK 
+2) IDE (Eclipse/STS -  IntelliJ IDEA/NetBeans/ Atom/VS Code)
+3) Maven
+4) Git
+5) Tomcat 
+6) Node/NPM
+7) Angular (jasmine/karma) - JS based SPA framework
+8) TypeScript
+9) Selenium (Automation Testing)
+
+
+			
+	Software	Download URL	
+Java Platform		JDK 1.8		https://www.oracle.com/java/technologies/downloads/#java8-windows	(JDK + JRE - JVM)
+Build & Dep Mgmt Tool	Maven 3.x	https://maven.apache.org/download.cgi	apache-maven-3.8.2-bin.zip
+SCM			Git 2.33		https://git-scm.com/downloads	
+IDE			Eclipse 2021-9 R	https://www.eclipse.org/downloads/packages/	Eclipse IDE for Enterprise Java and Web Developers
+IDE			STS 4		https://spring.io/tools	
+Web Server		Tomcat 8.5.x	https://tomcat.apache.org/download-80.cgi	
+
+
+
+Software Configuration Management Tool (Distributed Version Controlling Tool)
+
+Project ( 5 file)
+
+Project1 (8 files)
+
+ProjectFinal (17 files)
+
+Git --- Linus Torvalds (Linux Kernal writter)  Perforce, SVN, CVS  (Centralized)  
+
+Setting up the Environment Variable
+1) User Level Env Variable (for the logged-in/current user only)
+2) System Level Env Variable (for all the users)
+
+
+JAVA_HOME   -- C:\Program Files\Java\jdk1.8.0_281
+
+
+PATH -- %JAVA_HOME%\bin   (you can able to access the file/program/application from anywhere using your command prompt)
+
+
+
+Git Bash (CUI - Character User Interface) type git commands   (git clone, git push, git pull, git commit, git add)
+Git GUI 
+
+
+Client/Server concept  (git bash or git gui / Github )
+
+github - centralised repository to store all the codes 
+
+
+.git folder ( git local repo)
+
+
+1) Staging area ( temporary area before commiting the files/folders to git repo) [git add]
+2) Local repo (a folder in your filesystem)
+3) Remote repository  (github)
+
+
+git init (This will create a local git repository)
+
+git add .
+
+git commit -m "commit message"
+
+git log 
+
+
+git push source_branch  remote_branch
+
+git push master origin
+
+
+git clone <git url>
+
+
+https://github.com/syskantechnosoft/ribbon.git
+
+
+
+IDE - Eclipse EE/STS 
+
+IDE - Integrated Development Environment
+
+
+javac HelloWorld.java  (invoking the java compiler)   (Build process)
+HelloWolrd.java (Source Code)   ------ HelloWorld.class (Byte /Object Code)  (javac) (running the java app)
+
+
+java HelloWorld (invoke the JVM and run the starter class)
+
+
+Java is a compiled as well as Interpreted Programming Lang
+
+Java Virtual Machine is a computer which is completely made up of softwares only
+
+Java is platform independant/architecuture neutral programming lang, but, Both JDK, JRE and JVM all platform dependant
+
+1) JDK  & Environment Setup & Path update
+2) Git SCM tool
+
+
+
+Java  - General purpose programming Lang 
+
+(Desktop based applications -- stand alone applications)
+
+(Web based application)
+
+(Enterprise based application)
+
+(Mobile Based application)
+
+
+ 
+JAVA SE (Standard Edition) (150mb)  -- JDK  (core java lang, oops, threads, collections, jdbc, generics.....) - core java
+
+JAVA EE (Enterprise Edition - Servlets/JSP/EJB/JPA/JMS/JAXP......) javax.persistance,   [Adv Java]
+
+JAVA ME (Mobile/Micro Edition)  -- Small foot-print (10-15 mbs)
+
+
+
+JDK & JRE & JVM 
+
+
+JRE - Subset of JDK   - Java Run Time Environment (you can only run the java byte code)  .class 
+
+JDK - Superset of JRE -- Java Development Kit Environment (converting source code - byte code) .java -> .class
+
+JVM - Java Virtual Machine 
+
+
+WORA - Write Once Run Anywhere  
+
+
+Java is platform independant where as JDK,JRE & JVM are not...
+
+
+OOP - Object Oriented Programming  (classes & object)
+
+POP - Procedural Oriented Programming  (methods & variables) 
+
+1) Security 
+
+abstraction (hiding implementation)  abstract keyword (abstract class - interface) (maps /car dashboard)
+inheritance  (parent class/base/super class - child class/ sub class/derived class)  extends  (parents wealth/property)
+encapsulation (hiding data) access modifiers (private, default/package, protected/public)
+polymorphism (reusing code) overloading (same class diff signature) & overriding (betn/.. base & child with same signature)
+
+
+class [ data -member/instance variables/state & methods/behaviours]
+
+
+
+JVM 
+
+
+Class & Object  
+
+class - blue print 
+Object - instance of a class 
+
+50 cents coin    ---   draw 10 circles (5 circles using black colour pen,  3 using red colour pen, 2 using purple colour marker)
+
+class 
+
+
+Car  --  
+
+
+procircle -- solid line cirlce, filled circle, dotted circle, 
+
+
+
+Editions 
+
+
+Workspace -- A Folder in your file system (java projects)
+
+
+
+Ctrl =   To increase the font size
+
+Ctrl -  To decrease the font size
+
+
+Ctrl+ Space == Auto code suggestion (code intellisense)
+
+
+Ctrl + F11 = to run the java application 
+
+
+
+Stack & Heap Memory 
+
+
+RAM (Random Access Memory Read/write memory) & ROM (Read Only Memory)
+
+JVM -- RAM  ( Stack Area & Heap Area)
+
+Stack Area -- Data Structure  - The way of storing the data [LIFO - Last In First Out]
+
+storing the member variables, storing the object reference, local variables
+
+Heap Area - Objects, String pool (Strings) 
+
+
+
+1) JDK, Git, Env Var, path set up
+2) Git commands (git add, commit, git push, git clone, git log, git diff )
+3) HelloWorld (notepad, using eclipse) 
+4) OOPs , JDK,JRE&JVM, Editions of Java (SE,EE,ME)
+
+Eclipse it's a zip
+
+
+STS4  -- it's a jar file  (rename sts4.jar)
+
+java -jar  sts4.jar
+
+
+sivakumar.os@revature.com  (teams) 
+
+
+ 
+
+
+
