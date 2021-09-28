@@ -1,0 +1,401 @@
+https://revature.zoom.us/recording/detail?meeting_id=%2FGpI%2BDu8QeidhSAMMGPE0A%3D%3D
+
+JDK, JRE, JVM
+
+Git, JDK, Maven, Eclipse, Tomcat - Installation
+
+Git commands - init, clone, commit, add
+
+Java 8 -- NIO, I18N, Lambda, Functional Interface
+
+
+OOPs 
+
+Classes, Objects, *
+
+Editions of JAVA (SE,EE,ME) 
+
+
+Open Your Eclipse 
+
+
+Class 
+
+1) Built-in Class (system defined) System, String, StringBuffer, StringBuilder 
+2) User Defined class (Employee, Student, Users....) public class Employee { }
+
+3) Bean Class/ Simple / Concrete Class/ Complete Class (A class with properties and getter , setters)
+4) In-complete/ abstract class/partial class ( abstract keyword)
+
+5) POJO (plain old java object) (a class which is not extending any other class nor implementing any interfaces)
+6) Wrapper classes [Boolean, Byte, Short, Character, Integer, Long, Float, Double]
+
+7) Parent/Base/Super Class
+8) Child/sub/derived class
+
+9) inner class ( a class which is defined inside another class)
+10) annonymous (nameless) [A class without a name]
+
+11) Starter Class [A class with the main method]
+
+
+Lang JAVA
+
+FRENCH --- 
+1) Learn the alphabet     tokens [a-z, A-Z, 0-9, +,-,*,/,%, ., ,, ',", @] 
+2) Learn the  words            (keywords - reserved words)
+3) Learn the grammer (sentences)  (syntax , expression )
+4) reading/interaction   (class, objects)
+5) reference lang           c 
+
+
+Bcos of primitive data types, java is not a pure OOP lang. [boolean, byte, short, char, int, long, float, double] -- non-objects
+
+
+
+// Single line comment  
+
+/*   Multi
+  line
+ comment */
+
+/** documentation comment 
+   which spans on
+   mulitple lines */
+
+
+class = [state+behaviour]
+
+car = [wheels, seats, engine, stearing,.... speed, yearOfMfg,Name + drive(accelerate,break), ...]
+
+state = properties
+behaviour =  methods (functions written inside a class) 
+
+state/property/ member(or)instance variables 
+
+No keyword (access-modifier) is mentioned before the name of the variable/methods the default will be automatically applied
+
+0, boolean = false, obj = null;
+
+this -- keyword refers the current object 
+
+garbage collector (gc) -- Automatically clear unused objects 
+
+
+Objects Will be created in heap memory (RAM-- Stack, heap (String pool))
+
+
+object reference & object 
+
+explicit pointer concepts is not available in java, but 
+
+user defined data types like objects, arrays uses pointer concepts internally
+
+constructor will help to initialize the member variable/fields/properties during object creation.
+
+getter& setters are used to modify object's properties
+
+package in java --- 
+
+default package in java -- (java.lang)
+System , 
+
+
+Date (java.util, java.sql)
+
+
+Variable ( Instance/Member variable - which is defined outside any methods and inside the class) most of the time it is private
+(Class Variable/Static Variable -- All objects will share same value  inside any methods or outside methods )
+
+
+
+JVM will automatically add the default constructor if no parameterised constructor is defined. 
+
+Final  variables = Constants 
+
+
+access modifier -  private, default(package), protected, public 
+
+non-access modifier (behaviour)  - static, final, abstract, volatile 
+
+static varibale -- class level variable
+final variable -- constants (variable - non modifiable/class- no inheritance /methods - no overriding)
+
+abstract - incomplete methods/class ( methods & class) 
+
+
+inheritance ( in which one class can get properties of other class)
+
+two class (giver - parent, receiver - child)
+
+class A {
+
+}
+
+class B extends A {
+}
+
+class C extends B {
+
+}
+
+simple inheritance, B <- A
+
+multi-level (grandParent/Parent/child or Parent/Child/grantChild)  C <- B <- A
+
+Multiple inheritance 
+
+hybrid 
+
+
+Abstraction (hiding implementation)
+
+
+Encapsulation (Hiding data) 
+
+
+abstract keyword (class/method) 
+
+
+polymorphism ( poly - many) 
+
+
+1) Static polymorphism   -- compile time (overloading)
+2) dynamic polymorphism  -- runtime  (overriding)
+
+method signature -- method declaration - name of the method, return type, access modifier and arguments
+
+
+Annotations -- meta data 
+
+
+meta data - data about data 
+
+Book -- Java Complete Reference 
+
+TOC - Table of Contents (chapter wise content with page number)
+Index  (concepts in alphabetical order  page numbers associated)
+
+
+Annotation is introduced in Java5
+
+@SupressWarning
+
+
+Built-in annotation 
+User-defined annotation 
+
+
+annotations can be used on class/methods/variable 
+
+
+JPA (Hibernate)
+SpringBoot
+
+JSP/Servlet
+
+web.xml (deployment descriptor file is optional for web applications)
+
+
+garbage collector -- 
+
+
+
+Dependency Injection (Injecting the dependency at run-time)
+
+1) take medicines 
+2) go to doctor--  inject the medicine 
+
+
+spring- boot (angular)
+
+
+Dependency Injection -- Design pattern (It's a proven solution to resolve a particular problem)
+
+I need to travel from City A - City B 
+
+1) travel by road
+2) travel by train
+3) travel by air 
+4) travel by bike/bicycle 
+
+Factory, Builder, Facade, Singleton, MVC ..... 
+
+<class_name> <obj_ref_name> = new <constructor()>;
+
+
+Employee {
+   int id;
+   String name;
+   Address address;
+
+}
+
+
+
+Address {
+  int doorNo;
+  String streetName;
+  String city, zipcode,state,country;
+  String landMark;
+
+}
+ 
+(loosely coupled code)
+@Autowired
+Employee employee;
+
+
+toys -- spider man toy 
+
+lego toys set (blocks) -- 
+
+IoC - Inversion of Control 
+
+access modifiers
+private
+(defult/package) - no keyword
+protected
+public 
+
+
+non-access modifiers
+static   -   block/method/properties ( Class level variable/ Access using the class name not by object name)
+final   -    variable/method/class (constant/no-overriding/no inheritance)
+abstract  - to specify the in-complete methods & class (class & methods)
+transient  - only with properties (to avoid serializing the member variable)
+
+CreditCard
+   16 digit card number 
+
+Employee
+
+   SSN - Social Security Number
+
+
+Serialization - way of storing the state of an object in permanent storage (flat file .txt, .rtf)   -- creating, opening & writing a file
+
+Serializable- Marker Interface  - this interface will not have any methods
+
+Deserialization - Is the reverse of serialization (opening, reading & constructing)
+
+
+
+static { 
+    //initialization code
+
+}
+
+
+Wrapper classes ( Collections, Frameworks)
+
+
+Boxing -- Converting the primitive to it's Object 
+
+Auto boxing 
+Auto Unboxing
+
+
+Arrays (Continuous memory Location) 
+
+1) single dimensional array
+2) multi dimensional array
+
+In java Arrays are Homogeneous (same data type)
+
+Heterogeneous arrays 
+
+
+String (Special Data type in Java)
+
+String are immutable in JAVA (It value can't be changed once after creating)
+
+Everytime when the string gets modified, new copy of that string object will be created in string pool. (heap)
+
+
+Interfaces ( 100 % abstraction)
+
+Marker Interface (An interface with no methods)
+
+by default all the methods are public & abstract 
+
+interface will have abstract methods (only method declaration not the definition)
+
+
+Exception Handling  
+Throwable  (1- Exception 2-Error)
+
+1) Built-in Exception (Exception, ArithmeticException, NullPointerException....)
+2) Custom/User-Defined Exception (InvalidAccountNumberException, ...)
+
+
+3) Compile Time /Checked Exception (IOException
+4) Run Time /Unchecked Exception (ArrayIndexOutOfBound, ArithmeticException)
+
+
+Ctrl+Shift+F  = To format the code in Eclipse
+
+
+Handling the Exception 
+1) try/catch block   -- handling the exception manually
+2) throws   -- informing jvm to handle it
+
+
+throws, throw, try, catch, finally 
+
+throws -- will inform jvm about exception object 
+throw -- will help you to throw any Exception object from your code
+try -- the code which might throw exception will be place inside this block
+catch -- will catch the provided exception and give the program to smooth exit or continue with other code
+finally - irrespective of exception status, few codes will get executed always 
+
+
+try block should have a catch block or finally block
+
+
+
+operators
+1) unary (only one operand & one operator ++, --) 
+2) binary (+,-,*,/,%, ==, <=,>=, !=, =, +=, -=,*=,/=,%=, &&, ||, !, ^, &, |)
+3) ternary ( (condition)?true section:false section;) -- simple one-line if else
+
+line-by-line 
+
+Looping statements (repetitive statements) -- Entry control [for, while  -- 0-n time] Exit control [do- while 1-n]
+Control Statement (if, if else, nested if, switch.....)
+
+
+
+
+Create a class to multiply 2 numbers without using * operator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
