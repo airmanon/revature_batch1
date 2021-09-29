@@ -1,0 +1,214 @@
+project->properties(Alt+Enter) ->Java Compiler ->JDK Compliance
+
+Project Facets ->Java (version 1.8)
+
+
+https://revature.zoom.us/rec/share/ttHCxWM4_cvTMnSN5CjFApOWEAoiPzr-9vYxypZfijsxklz-Edv7PNVEJr0TcH92.9moNBKZRRoFhTQOP?startTime=1632836213000
+
+https://revature.zoom.us/rec/share/ttHCxWM4_cvTMnSN5CjFApOWEAoiPzr-9vYxypZfijsxklz-Edv7PNVEJr0TcH92.9moNBKZRRoFhTQOP?startTime=1632856323000
+
+Passcode : !pZpg9VH
+
+
+
+
+Object -- java.lang.Object 
+
+
+Object class is the parent class for all the classes 
+
+
+Stream --- flow of data
+
+System --- input/output/error [in,out,err]
+
+Stream is an abstraction 
+
+the default input stream (user ---> data ---> system/program) keyboard/console
+output (system/program  ----> data ----> user)  monitor/console
+
+
+
+Start the Class name with Capital Letter
+method name and variable name should start with lower case. If it is more than one word, then Starting from second word, first letter of the word should be in capital
+
+Date dateOfBirth;
+
+int myAge;
+
+
+public void drawCircle() {
+}
+
+
+package name should be in all lower cases
+
+final variable --- ALLCAPS
+
+
+
+
+
+
+Collection  API
+API - Application Programming Interface (collection of multiple classes, interfaces, annotations, exception etc., in a single combinied format)
+
+
+class Employee {
+  private int id;
+ private String name;
+private String email;
+
+}
+
+
+pack it in jar file 
+
+
+jar -- java archieve
+war -- web archieve
+ear -- enterprise archieve
+
+
+Collection(I)  -- Help to process group of objects (primitives are not allowed in collection)
+ -- List (I) [ allows duplicate, allows null]
+ -- Set (I) [ won't allow duplicate, allows null only one time]
+
+ -- Map(I) (key,value pair) Key should be unique, values can have duplicate
+
+
+Data Structure --- The way of Storing the data (structuring the data)
+
+array, queue, stack, vector --- 
+
+QUEUE --- FIFO (First In First Out) [enque, dequeue] 
+Stack ---- LIFO (Last In First Out) [push, pop] 
+
+array -  [Insert in the end, insert in the middle, insert in the begin]
+
+
+flat file -  10 char, (unstructured data)
+
+db table -- proper rows, column (structured data)
+ 
+
+Array -- Fixed size array
+ArrayList  -- dynamically growable array
+
+1) ArrayList -- dynamically growable array
+ It allows duplicate values
+ It allows null many times
+ It maintains insertion order
+
+
+Easiest Operation --- adding at the end/deleting at the end
+Costlier Operation --- Inserting/deleting in the middle/begining
+
+
+2) LinkedList 
+
+Easy -- adding/deleting data in the beginning/middle
+diff -- adding/deleting at the end
+
+Set  
+
+1) won't allow duplicates
+2) allow null once
+3) Won't maintain insertion order
+
+Map <k,v> 
+
+ 1) which stores the data in key, value pair
+ 2) Keys are unique
+ 3) value can have duplicate
+ 4) null is allowed for key one time
+ 5) null is allowed for value many time
+
+Generics 
+
+List<Employee>
+
+
+1000, 1 cent coins   -- 10 boxes
+ put these 1000 coins inside these 10 boxes 
+
+1) how many coins you will put it in each box
+
+Rules of the game : 
+1) I 'll ask you any amount 100, 1 cent coins (one box,  more than one box) -- you shouldn't remove any coin from the box
+2) I won't ask more than 10$
+3) I won't ask you in fraction 1 coin, 2 coin... 7.5 cents (7, 8)
+4) I may ask you one time or two time 
+5) I'll ask after putting all 1000 coins inside the 10 box
+
+
+clue : number systems (binary 0,1)
+
+1 = 1
+2 = 2
+3 = 4
+4 = 8
+5 = 16
+6 = 32
+7 = 64
+8 = 128
+9 = 256
+10 =  (1000-511) 489 = 2^9
+
+
+CD, DVD  -- 700MB, 4.7GB
+
+2^10 = 1024   32GB  --- 31.4
+
+
+1) decimal (0-9) base 10
+2) binary (0,1) base 2
+3) octal (0-7) base 8
+4) Hexa Decimal (0-9, A-F) 16
+
+
+T -- Generic Class (Employee, Student.....)
+
+Generic -- What type of Element a collection can store.
+
+
+Lambda -- annonymous function (nameless)
+
+public void functionName(arg_type arg) {
+
+}
+
+
+public void (arg_type arg, ....) {
+
+}
+
+
+void (arg_type arg, ....) { 
+
+}
+
+(arg_type arg, ....) {
+}
+
+Lambda function/method (inline functions) function written in a single line
+(arg_type arg, ...) -> { };
+
+(arg....) ->  ;
+
+
+Marker Interface -- An interface no methods
+functional Interface -- An interface with one method;
+
+
+Comparator
+Comparable
+
+
+
+
+
+
+
+
+
