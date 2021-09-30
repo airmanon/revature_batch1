@@ -1,0 +1,255 @@
+https://revature.zoom.us/rec/share/zER2r8Zy_BhfIoIQCsPR34OnnXONomfXZdSKFhFGKU-nyihvcLG8_llYUDlmqERp.J6LoKOZITT9EF6NE Passcode: 2ND1U=ah
+
+https://revature.zoom.us/rec/share/n7BgfL3BC0GJ5BNthwHxuy21aAp1D13ibAhnAQKyUa6yZBtpF6W8jK-1xI2Sa0me.n3YWqP71iQKL5R27 Passcode: $61%P1XA
+
+https://revature.zoom.us/rec/share/X95q7t87pTsLsCOoEfOrrdVA-0cjmcnF5m4HUJQbsH058VaV7mWTksAhZRH30B31.gZwOVt5AoSOhdZLw Passcode: uQ1ky5A@
+
+
+https://revature.zoom.us/rec/share/vIQ2R0QDNjTKTc3imUzNmPKqwNdHSprNr5IV57UdHK2ADbkTLBVPFpZHZHowrcK6.UE29vxFzdBqKmNqt Passcode: 8AEc^*%f
+
+
+https://revature.zoom.us/rec/share/n7BgfL3BC0GJ5BNthwHxuy21aAp1D13ibAhnAQKyUa6yZBtpF6W8jK-1xI2Sa0me.n3YWqP71iQKL5R27 Passcode: $61%P1XA
+
+https://revature.zoom.us/rec/share/MEG_66D73MJkFNex1uew3WHh_4uf3Kuy4TOdpnqQJVphmc9ooc1uQVXSTTWnU7q-.EXxLxI9HAewULX5F Passcode: uw$x0U6A
+
+
+Object & Object Reference (pointer)
+
+hashCode - int
+equals
+
+Scanner  (Getting input from user through console)
+
+next(), nextLine() 
+
+Collection, List(I), Set(I), Map(I)
+ArrayList(C), LinkedList, HashSet, HashMap
+
+data Structure Stack, Queue
+
+AutoBoxing, AutoUnboxing 
+
+Iterable 
+
+Generics 
+
+E - elements
+K,V - Key, Value
+T - any class
+
+
+Java 8 Feature
+
+Functional Interface - An interface with only one abstract method 
+
+Lambda -- Annonymous Function (nameless funtion)
+
+you can store a function in  a variable
+
+Lambda syntax
+() ->{expression};
+
+Optional Class,
+
+Comparable & Comparator Interfaces
+
+TDD - Test Driven Development 
+Testing 
+Threads
+Logging,
+Maven 
+
+
+Unit Testing --- JUnit -- Testing individual component in project
+TDD - Test Driven Development
+
+Before writting a single line of code, write the test case first. 
+0) Write Test case
+1)Test will fail
+2) write code to make the test pass
+3)Test will pass
+4) Enhance your source code
+5) Test Again
+
+JUnit4
+https://www.javatpoint.com/junit-tutorial
+1) download junit4.jar & harmcrest-core.jar
+2) Write the Class with a method
+3) Extract the zip in your fav location
+4) Right click Project ->BuildPath->Configure Build Path (Select Libraries tab)
+5)Click "Add External Jar" button
+6) select the jar file which we extracted in earlier step 3
+7) write the test case
+8) run the test case as a junit test (Run As - JUnit Test)
+
+Process - will occupy memory, will have pid (process id)
+  sub-process (Spell check, auto save, grammer check)
+
+process is a heavy weight thread
+sub-process (thread) -- light weight process 
+
+
+Thread --  light weight process 
+
+Game parogram (Multi Player - RoadRash, NFS2, PrinceOfPersia, Mario.... ) increase the score, position of other bikes/car, our vehicle speed, 
+
+
+Multi-Tasking, Multi-Threading
+
+
+OS - Multi-Tasking (play a song while creating a document)
+
+
+Multi-User OS 
+
+Scheduling Algo (Round Robin) 
+
+Processor (Octa Core )
+
+
+Creating a Thread
+1) By extending Thread (C)  class
+2) By implementing the Runnable (I) interface
+
+Thread Life Cycle
+1) New
+2)Runnable
+3) Running
+4)Blocked
+5) Dead/Terminated/Killed
+
+
+Concurrent Execution / Parallel Programming
+
+
+Synchronization 
+
+Thread --- DeadLock
+
+DeadLock 
+
+
+
+
+
+Logging 
+
+What --  It is a mechanism using which you can check what went well/wrong. Either in a flat file/db...  Log4J, SLF4J
+
+Logging pattern 
+Logging Level
+ 
+Why
+Where
+
+
+https://java2s.com/     ---  to Download any jar files
+
+Appender / Handlers
+Formatter/ Layouts 
+
+
+
+Logging Level -- ALL, INFO, WARN, DEBUG, 
+
+
+
+Maven 
+
+What - It's a build, test,package, dependency management tool
+
+build -- converting from java source --- class
+test  --- automated unit test
+package --- jar/war/ear 
+
+
+pom.xml ---- project object model 
+
+
+xml files are case & space sensitive
+
+
+xml -- is standard way of storing & transfering the data
+
+html - hyper text markup lang (tag based lang)
+
+tag - A command enclosed in angular bracket <html> <head> <body>
+
+Opening & Closing tags <html> </html> 
+
+html tags are pre-defined 
+
+
+xml -- tags are user defined 
+xsd, dtd
+
+xsd - xml schema definition/description
+dtd - document type description
+
+pom.xml
+
+Accessing Maven
+1) using command prompt (mvn -v)
+2) using the IDE (maven plugin for Eclipse)
+
+(archetype) -  pre-defined project set
+groupId :
+artifactId:
+
+
+
+JAVA_HOME = C:\Program Files\Java\jdk1.8.0_281
+M2_HOME = C:\apache-maven-3.8.2
+%M2_HOME%\bin;%JAVA_HOME%\bin
+
+
+
+build  -- converting source code -- byte code (.java -> .class)
+
+deploy  -- running the app on server
+
+test  - junit test 
+
+packaging   -- jar/war
+ 
+generate-resource
+
+
+dependency mgmt  -- 
+
+
+maven 
+1) Local repository  (.m2)  -- C:/users/<user_name>/.m2
+2) Remote repository (mvnrepository)  
+
+
+
+
+Enterprise/Full Stack Project
+1) Front End  (JS based Framework -- Angular/React (Vue....) SPA 
+2) BackEnd  (WebService - RESTfull ) - JSON [SpringBoot]
+3) Database (MySQL/Oracle/DB2/MongoDB)
+
+
+youtube channels
+
+javabrains
+telusko
+durgasoft
+
+url
+w3schools
+javatpoint
+
+
+stackoverflow
+
+
+
+
+
+
+
+
+
+
