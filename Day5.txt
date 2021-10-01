@@ -1,0 +1,260 @@
+TDD   - Test Driven Development
+
+JUnit -- Unit Testing Framework for JAVA
+
+
+Thread 
+1) By extending the Thread class
+2) By Implementing Runnable Interface
+
+LifeCycle of Thread
+1)New
+2)Runnable
+3)Running
+4)Blocked
+5)Dead
+
+id, name, priority, (MIN_PRIORITY[1], NORM_PRIORITY[5],MAX_PRIORITY[10]) 
+
+isAlive(), isDeamon(), sleep(), 
+
+DeadLock & LiveLock 
+
+Logging -- Log4J, SLF4J (Simple Logging Facade for Java)
+Logging4Java
+
+Logging Level, Logging Format
+
+Maven - Build, deploy & dependency mgmt tool 
+
+(Java, Kotlin (New lang used for Android), groovy)
+
+Android - Mobile OS [java+linux] 
+
+
+pom.xml --  project object model
+
+Maven Goals [mvn test, mvn build, mvn package, mvn install] 
+
+Accessing Maven
+1) Through CUI [Character User Interface -  command prompt/terminal [JAVA_HOME, M2_HOME]
+2) using the GUI [maven eclipse plugin]
+
+
+
+copy con <file_name>
+this is a sample file. press Ctrl+z  ^z(to save the file)
+
+dir
+
+date
+
+time
+
+copy 
+
+rename
+
+.bat --- dos (Disk Operating System)
+
+windows --- GUI [Graphical User Interface] -- pointing device
+
+
+
+.m2 folder (c:/users/<user_name>/.m2)  -- Local repository 
+mvnrepository.com  --- remote repository
+
+
+when you change/update and save the pom.xml, it starts building the project again.
+
+select project (press alt+f5) - Update project [force update of snapshots]
+
+
+Testing 
+
+
+public class Starter {
+  public static void main(String args[]) {
+     Starter obj = new Starter();
+     System.out.println("Sum ="+obj.add(5,8));
+}
+
+public int add(int a, int b){
+   return (a+b);
+}
+
+}
+
+
+Manual Testing 
+
+Automated Testing 
+
+
+Test 
+1) Unit Testing [Testing individual components] 
+2) Integration Testing 
+3) Load Test (Performance) 
+4) Manual/Automated Test 
+
+
+JUnit -- Unit Testing framework for Java
+
+junit.org  --- official site
+
+
+https://github.com/junit-team/junit5-samples/tree/r5.8.1/junit5-jupiter-starter-maven
+
+
+download the repo, extract the zip file.
+
+import it in eclipse
+
+File - Import(jar/war)/Open Project from FileSystem
+
+
+Maven Project Structure
+
+src/main/java
+src/main/resource (for spring boot framework)
+src/main/test
+
+
+
+important annotations in JUnit
+
+@Test   -- Test case (for testing a method) - method level annotation
+@DisplayName ("name to be displayed for this test") 
+
+@ParameterizedTest (name= "{0}+{1} ={2}")  - method level annotation
+@CsvSource({"0,1,1","1,2,3","49,51,100","1,100,101","10,400,410" }
+
+
+@BeforeAll
+
+@BeforeEach
+
+@AfterAll
+
+@AfterEach
+
+
+Service -- 
+
+Employee -- Entity Bean (A class which is representing a Table in the DB
+
+DB -- CRUD  -- Create/Insert, Read, Update, Delete)
+
+
+
+/*
+ * Copyright 2015-2021 the original author or authors.
+ *
+ * All rights reserved. This program and the accompanying materials are
+ * made available under the terms of the Eclipse Public License v2.0 which
+ * accompanies this distribution and is available at
+ *
+ * http://www.eclipse.org/legal/epl-v20.html
+ */
+
+package com.example.project;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+class CalculatorTests {
+
+	@Test
+	@DisplayName("1 + 1 = 2")
+	void addsTwoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
+	}
+
+	@ParameterizedTest(name = "{0} + {1} = {2}")
+	@CsvSource({
+			"0,    1,   1",
+			"1,    2,   3",
+			"49,  51, 100",
+			"1,  100, 101",
+			"10, 400, 410"
+	})
+	void addTest(int first, int second, int expectedResult) {
+		Calculator calculator = new Calculator();
+		asser
+		assertEquals(expectedResult, calculator.add(first, second),
+				() -> first + " + " + second + " should equal " + expectedResult);
+	}
+}
+
+
+https://howtodoinjava.com/junit-5-tutorial/
+
+
+https://www.infoworld.com/article/3537563/junit-5-tutorial-part-1-unit-testing-with-junit-5-mockito-and-hamcrest.html
+
+
+Mockito - 
+
+
+
+
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+    <junit.jupiter.version>5.5.2</junit.jupiter.version>
+    <junit.platform.version>1.5.2</junit.platform.version>
+</properties>
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-runner</artifactId>
+        <version>${junit.platform.version}</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+Design Patterns
+
+
+   It's proven solution for a particular challenge. 
+
+1) Creational DP (Abstract Factory, Builder,DI,Singleton, ObjectPool)
+2) Structural DP (Bridge,Decorator, Facade,Marker, Proxy)
+3) Behavioral DP  (Iterator, Mediator, ChainOfResponsibility) 
+4) Concurrency DP (Join, GuarededSuspension,ThreadPool, Scheduler)
+
+
+A class can extend only one class
+But A Interface can extend more than one interface
+
+A class can implement more than one interface
+
+Design Principle
+Class-level, Object Oriented methodology to develop app
+1)Single Responsibility Principle
+2)Open-Closed
+3)Liskov Substitution Principle
+4)Interface Segregation
+5) Dependency Inversion
+
+
+
+
+
+
+
+
