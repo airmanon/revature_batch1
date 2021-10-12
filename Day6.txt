@@ -1,0 +1,283 @@
+WebService
+
+SOA - Service Oriented Architecture
+
+SOAP - Simple Object Access Protocol (XML, WSDL - Web Service Description Lang) -- Soap Based Web Service
+REST ful - REpresentational State Transfer (http methods) -- Restful Web Service
+
+What  - It's way of Exchanging data between Application/Device/Two parties (by using an endpoint running a method)
+Why  - To communicate/exchange data between two application/devices (ATM)
+How - Any Programming Lang (java, nodejs, .net, kotlin, groovy, python)  - Restful web Service using Java & Spring-boot
+
+Web Service - API 
+
+HTTP - HyperText Transfer Protocol
+Client - Server Model
+
+Siva - Normal Text - It's a Name, It's My name. 
+
+HyperText - A text, on clicking, it will give more information about that text
+
+Protocol - Set of Rules 
+
+http
+ftp = file transfer protocol
+smtp - simple mail transfer protocol
+pop - post office protocol
+
+
+digital data transmission -- packets 
+
+Two parties
+1) Sender
+2) Receiver 
+
+Request & Response Model -- Client & Server Technology
+
+
+http://www.google.com   -- URL   -- Uniform Resource Location 
+
+https == secured http
+
+Network 
+
+Network -- connecting two or more computer and other resources 
+
+(To share the resources) 
+
+
+Internet -- Network of Networks  (Electric Signal, Light Signal, IR Signal, Bluetooth)
+
+Degree Certificate - 
+
+TO Address - Bigger Font, Proper Address Details, Contact Numbers
+
+From Address - 
+
+LAN = Local Area Network
+MAN = Metrtopolitan Area Network
+WAN = Wide Area Network
+
+1) Make a Reservation 
+2) Go to the Hotel/Rest...
+3) Greeted by Host
+4) Get Seated
+5) Receive Menu (client - user + software 
+6) Order Foods/Drinks (waiter/server) request  (server)
+7) Receive Food/Drinks 
+8) Eat
+9) Pay
+10)Leave
+
+
+client [Hardware+software and a human] - Request [Request Object] 
+server [Hardware+Software ] 
+
+Java--  Servlet (httpRequest, httpResponse) - JSP 
+http - request, response
+
+
+URL -- http://www.google.com
+
+http - protocol 
+www - world wide web
+google.com - domain name
+
+Resource in Internet -- Address - IP Address (Internet Protocol Address IPv4,IPv6)
+IPv4 -- 178.78.156.98  (0-255.0-255.0-255.0-255)
+
+
+localhost(DNS Name)  -- 127.0.0.1 
+
+google.com 
+
+USB Port -- Physical Port  (Port Number)
+
+HDMI Port
+
+Audio Port 
+
+SD Card Port 
+
+VGA Port 
+
+
+Software Port (8080)
+
+Server -- Hardware +Software 
+
+  Web Server -- Apache Tomcat (8080)
+  DB Server 
+
+(DB)Oracle XE 8080 (eXpress Edition)
+
+(DB) MySQL - 3306
+
+Angular - 4200
+
+React : 3000
+
+
+(DB) Postgres : 5432
+
+Client + Server Concepts [Request & Reponse ]
+
+Tool -- Postman 
+
+
+http -- request methods 
+  get ---
+  post --
+  put  --
+  delete -- 
+
+
+DNS - Domain Naming Server 
+
+(unique name) google.com -- 168.56.78.34 
+
+patch
+option
+trace 
+
+
+Browser 
+ 1) HTML Rendering Engine
+ 2) Styling/CSS Engine 
+ 3) Scripting/JS Engine
+
+
+HTML -- All the tags are pre-define 
+
+WebPage = html+css+js   [
+
+
+postman is the api testing tool (will help you to visualize the request & response object)
+
+
+
+
+
+
+
+
+WebService ---  
+
+
+ATM --- 
+
+ABC Debit Card
+
+
+1) ABC's ATM (Change pin, deposit, withdraw, print last 5 transaction, update mobile,email, check balance)
+
+2) XYZ's ATM (Withdraw, check balance, deposit, last 5 transaction)
+
+
+
+ABC -- JAVA
+
+XYZ --- .NET 
+
+HTML - HyperText Markup Language -- We create web pages using HTML
+HTML is not case and space sensitive. Tags are pre-defined
+
+http 
+
+HTML - For presenting the data (Display/View Layer)
+
+
+subscribe - get  (Streaming model) LIVE SHOWS
+
+
+REPRESENT --- XML (Extensible Markup Lang)  
+
+It's case & space sensitive, tags are user defined
+
+
+Employee --  id, name, email  (JAVA)
+
+
+XYZ -- (.NET) 
+
+XML/JSON 
+
+
+JSON - JavaScript Object Notation 
+
+
+XML Format
+<employees>
+ <employee>
+   <id>100</id>
+   <name>test</name>
+   <email>test@gmail.com</email>
+ </employee>
+.
+.
+.
+.
+.
+</employees>
+
+
+JSON
+
+employee = [ {"id":100,"name":"test","email":"test@gmail.com"}, .... ]
+
+
+
+what  --  Using a URL calling a method in your application
+
+
+
+
+EmployeeController
+
+{ 
+  @Getmapping("/hello")	
+   public String welcome() {
+   return "Hello User!!!Welcome to WebService!!!";
+} 
+
+}
+
+
+https://reqres.in/  
+
+
+WebService --- API 
+
+
+
+WS - Web Service
+
+STS - Spring Tool Suite (Eclipse based IDE)  .jar format
+
+
+java -jar sts4.jar 
+
+
+spring.io  -- Spring Framework official website
+
+
+get  --- Read/Retrive data (JSON )
+post -- insert new record
+put -- update existing record/row
+delete - deleting/removing existing row
+
+
+CRUD  - Create/Insert    Read   Update Delete
+
+SPA - Single Page Application 
+
+WebSites - Multi Page Application (combination of multiple web pages, index.html, services.html, contactus.html, ....)
+
+SPA - index.html (component oriented Java Script based framework)
+
+
+
+
+
+
+

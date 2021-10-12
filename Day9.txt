@@ -1,0 +1,245 @@
+SQL - Structured Query Lang
+HQL - Hibernate Query Lang
+JQL  - JPA Query Lang
+
+JPA - Java Persistane API
+
+
+DatabaseMetaData
+ResultSetMetaData
+
+
+DDL - Data Definition Lang (managing the entity)
+DML - Data Manipulation Lang
+DCL - Data Control Lang
+DQL - Data Query Lang
+TCL - Transaction Control Lang
+
+Schema
+
+Constraints
+
+Functions
+
+https://www.postgresqltutorial.com/
+
+
+https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
+https://www.postgresqltutorial.com/wp-content/uploads/2018/03/printable-postgresql-sample-database-diagram.pdf
+
+
+C:\Program Files\PostgreSQL\12\bin
+pg_restore -U postgres -d dvdrental dvdrental.tar
+
+
+https://www.w3schools.com/mysql/default.asp
+
+In Java, everything Object (Relation)
+
+In Database, everything is Entity
+
+ER - Diagram (Entity - Relation Diagram)
+
+DDL - Data Definition Lang  (No Rollback)
+
+(Create, Alter, Drop, Truncate, Rename, Comment)
+
+DML - Data Manipulation Lang
+(select, Insert, update, delete, merge, call, Explain  plan, lock table)
+
+
+DCL - Data Control Lang
+
+ Grant & Revoke
+
+
+TCL - Transaction Control Lang
+ Commit, Rollback
+
+
+DDL Examples
+
+CREATE TABLE TABLE_NAME (C_NAME C_TYPE C_SYZE [NULL | NOT NULL], [CONSTRAINT])
+
+ALTER TABLE TABLE_NAME [ADD | MODIFY | DROP] C_NAME
+ALTER USER IDENTIFIED BY PASSWORD
+
+DROP TABLE TABLE_NAME [CASCADE]  (Remove everything)
+
+TRUNCATE TABLE_NAME   (Remove data only)  [similar to delete with no where clause] - auto commit
+
+
+
+
+DML Examples
+
+INSERT INTO TABLE_NAME VALUES (V1, V2, ..., VN)
+INSERT INTO TABLE_NAME (C1, C2, C3) VALUES (V1, V2, V3)
+
+(full insert/partial insert)
+
+
+UPDATE TABLE_NAME SET C1 = V1, ... , CN = VN WHERE X = Y
+
+(single row [pk]/multi row update [non pk])
+
+DELETE TABLE_NAME WHERE [condition]
+
+SELECT C1, ..., CN FROM TABLE_NAME [table] WHERE [condition] GROUP BY [expression]
+HAVING [condition] ORDER BY table.field
+
+
+clause 
+Group By
+Order By
+ASC - DESC
+HAVING
+Like '%a' 'a%'
+IN
+BETWEEN 
+ANY ( )
+AND
+
+
+
+
+
+
+DQL -- Clauses
+
+
+
+Scalar (On Single Data) UPPER, LOWER, TO_CHAR, TO_DATE
+Aggregate (On group of data) MAX,MIN, AVG, SUM, COUNT [column level function]
+
+
+TCL
+Transaction Control Language statements are utilized to manage transactions within a relational database.
+
+COMMIT, any DML operations that were executed before the statements will be persisted permanently.
+ROLLBACK, any DML operations between two COMMIT statements will be completely erased (something like Ctrl + Z that will stop only when it reaches last time you opened the specific file). Committed transactions cannot be rollbacked.
+SAVEPOINT, utilized to ROLLBACK to a specific point in time.
+The general flow of using TCL could be as follows:
+
+[Many DML Operations]
+SAVEPOINT A
+[Many DML Operations]
+ROLLBACK TO A
+
+Entity
+   -- TABLE
+   -- VIEW
+  -- SEQUENCE
+  -- TRIGGERS
+  -- FUNCTIONS
+ -- STORED PROCEDURE
+ 
+
+Constraint ---integrity constraint--a rule that restricts the values in a database.
+   Primary Key (Not Null, Unique)
+   Foreign Key  
+   Not null (empty values are not allowed)
+   Unique (duplicates are not allowed)
+   check
+  
+
+
+RELATIONSHIP
+
+In JAVA --- Is A, Has A  (Car is a Vehicle) (Car has Tyres) [Parent, child]
+
+In Database -- One to One, One to Many, Many to One, Many to Many
+
+One to One - primary key 
+
+Foreign Key
+
+
+
+
+
+CREATE TABLE `revature`.`account` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `account_type` VARCHAR(45) NULL,
+  `interest_rate` FLOAT NULL,
+  `employee_id` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `accfk_idx` (`employee_id` ASC) VISIBLE,
+  CONSTRAINT `accfk`
+    FOREIGN KEY (`employee_id`)
+    REFERENCES `revature`.`employee` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+ctrl+ enter = to run a particular line in mysql workbench
+
+
+JDBC --- CRUD Operation
+
+Getting User Input,
+
+DAO 
+
+DatabaseMetaData
+ResultSetMetaData
+
+
+java.sql ---- package name for JDBC API
+
+JDBC - Java Database Connectivity
+
+1) Connection
+2) Statement
+3) PreparedStatement
+4) CallableStatement
+5) ResultSet
+
+6) DatabaseMetaData
+7) ResultSetMetaData
+
+
+1) DriverManager
+2) Date
+3) Time
+
+SQLException
+
+
+Database
+
+Tables    ----      Entity Bean
+
+employee    ----- Employee
+     id  INT               id int
+     name varchar(45)  String name
+     email varchar(45)  String email
+account       ------ Account
+
+Bean class -- Class with properties , constructor and getter & setter methods
+
+Bean class mapped to a database table is called as Entity bean class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

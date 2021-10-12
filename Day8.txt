@@ -1,0 +1,161 @@
+Amazon AWS
+
+Amazon RDS 
+
+RDS - Relational Database Service 
+
+MySQL
+Postgres
+MariaDB
+...
+
+Stand-alone installation (Downloaded and installed manually as a server)
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html
+
+
+https://aws.amazon.com/rds/faqs/
+
+
+
+Create Database
+
+1) Easy Create
+2) MySQL Engine
+3) Free Tier (db.t2.micro,1vCPU, 1GiBRAM,20GiB,0.02USD/hour)
+
+DB Instance Identifier -- sivaosmysqldb
+
+username & password (admin, Pa$$w0rd)
+
+
+Amazon Web Service -- Service Through Internet (Cloud Service Provider)
+
+
+PaaS - Platform as a Service (VM+OS+RAM+Storage) 
+IaaS - Infrastructure as a Service (VM) 
+SaaS - Software as a Service (GMAIL, MS Office)
+
+Hardware -- Infrastructure  (VM - Virtual Machines)
+
+OS - windows/Linux/Mac (Adobe, MS Office, AutoCAD, Photoshop.... , Games)
+
+JDK, Tomcat, Maven ... 
+
+Platform - Hardware + Software (OS, JDK, Maven,Tomcat, git....)
+
+ mysql -h sivaosmysqldb.cbtiwfosofwr.us-east-2.rds.amazonaws.com -P 3306 -u admin -p
+
+endpoint : sivaosmysqldb.cbtiwfosofwr.us-east-2.rds.amazonaws.com
+
+sivamysql1.cbtiwfosofwr.us-east-2.rds.amazonaws.com
+
+mysql -h sivamysql1.cbtiwfosofwr.us-east-2.rds.amazonaws.com -P 3306 -u admin -p
+Note : In case, you get error "mysql is not recognised as a internal or external command"
+
+add "C:\Program Files\MySQL\MySQL Server 8.0\bin" to the path environment variable
+
+
+CREATE TABLE `myschema`.`Employee` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(65) NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+default (sg-924fd0e4)
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithSecurityGroups.html 
+
+
+https://dev.mysql.com/doc/refman/8.0/en/mysql.html
+
+
+
+Amazon AWS (Amazon Web Service)
+EC2 - Elastic Cloud Compute (Processing Power)
+VPC - Virtual Private cloud
+RDS - Relational Database Service (MySQL, Postgres, Oracle, MariaDB, MS SQL)
+API Gateway - 
+IGW - Internet Gateway 
+SG - Security Groups
+IAM - Identity Access Mgmt (Adding users, roles)
+S3 - Simple Storage Service 
+EBS - Elastic BeanStalk
+ECS - Elastic Container Service
+EKS - Elastic Kubernetes Service
+VM - Virtual Machine
+AMI - Amazon Machine Image 
+Fargate
+Lambda
+
+
+
+Interacting to the DB using Java
+JDBC -- API - Application Programming Interface
+
+JDBC - Java DataBase Connectivity (Interfaces, few Classes)
+
+ Printer 
+1) Install the driver
+2) Connect the printer & laptop/desktop
+3) turn on the power 
+4) Load paper
+5) To test print
+6) turn off the printer
+
+
+DB Interaction  (Java - Prog Lang) ( DB Server)  JVM - It's a Process -- MySQL Server process 
+1) Driver (MySQL Driver, Oracle Driver, PostgresDriver) - Driver[I], Class.forName();
+2) Establishing the connection between Java & DB Server  (Connection [I])  - connection url, username, password
+3) Creating & running query (Statement/PreparedStatement/CallableStatement) [I]
+4) Storing & Processing the Result (ResultSet[I])
+5) close all the resources
+
+java.sql --- this is the base package for your JDBC api
+
+compile time exception  -- checked exception (you will get error during the compile time, if you are not handling it)
+
+
+postgres 
+
+connection url : jdbc:postgresql://localhost:5432/<db_name>
+driver : org.postgresql.Driver
+username : postgres
+password : postgres
+
+
+INSERT INTO employee ("id","name","email") 
+VALUES (?,?,?);
+
+Class.forName("com.mysql.cj.jdbc.Driver"); // loading & registering the driver
+
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/revature", "root", "root"); // establishing connection
+																														
+
+		String insertQuery = "INSERT INTO employee ('id','name','email') VALUES (?,?,?);"; // creating a query
+		PreparedStatement pstmt = connection.prepareStatement(insertQuery); // creating prepared Statement
+		pstmt.setInt(1, 100);
+		pstmt.setString(2, "abc");
+		pstmt.setString(3, "abc@gmail.com");
+
+		int insertStatus = 0;
+		insertStatus = pstmt.executeUpdate();   //executing the query
+
+		if (insertStatus != 0)
+			System.out.println("One Row Inserted Successfully!!!!");  //displaying insert status
+
+		pstmt.close();
+		connection.close();
+
+
+
+UPDATE `employee` SET `name` = ?,`email` = ? WHERE `id` = ?;
+
+
+DELETE FROM `revature`.`employee` WHERE `id`=?;
+
+
+
+
+

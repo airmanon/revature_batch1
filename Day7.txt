@@ -1,0 +1,188 @@
+
+
+Database
+
+
+ Development & Testing 
+
+ MySQL - community -- https://dev.mysql.com/downloads/installer/   (root/root)   -- select developer default   -   3306
+
+
+Oracle XE  -  https://www.oracle.com/in/database/technologies/xe-downloads.html    (system/admin, hr/hr)    8080
+
+
+Postgres - https://www.enterprisedb.com/downloads/postgres-postgresql-downloads (postgres/postgres)   5432
+
+
+Amazon RDS - 
+
+
+Database Server ( Client - Server)
+
+To access the database 
+
+1) The db server should be running
+2) Need a client to send request to the server 
+
+
+Types of DB clients
+1) Command Line Client (MySQL Shell/MySQLCommand Line Client , psql[postgres]) - CUI
+2) GUI Client (MySQL workbench, pgAdmin, Web ) 
+
+
+GMAIL ---  gmail url, username, password 
+Connection URL -- 
+
+MySQL server 8.0.x
+
+Accessing the MySQL DB using command line client
+1) Open "MySQL command Line Client" utility
+2) Enter the password for user "root"
+3) show databases;   -- List of database/schema in your mysql server
+4) connect <db_name>;
+5) show tables;
+6) select * from <table_name>;
+7) quit;
+
+
+SQL - Structutred Query Language 
+
+DDL Statements - Data Definition Lang
+DML Statements - Data Manipulation Lang
+DCL Statements  - Data Control Lang
+TCL Statements -  Transaction Control Lang 
+
+
+Accessing the MySQL DB using GUI (MySQL Workbench)
+
+1) Open/Launch MySQL WorkBench
+2) Click the + symbol 
+3) Add the DB Server details like server host name (127.0.0.1/localhost), username[root], password[root])
+4) Click the "Test Connection" button to check your db details
+5) If successful, click on "Ok" button
+6) select "schemas" tab, if it is in "Administration" tab. 
+
+
+PK - Primary Key
+NN - Not Null
+UQ - Unique (No Duplicate Entry)
+B  - Binary Value (True -1, False -0 )
+UN - UNsigned
+ZF - Zero Fill
+AI - Auto Increment
+G - Generated
+
+
+
+
+Accessing Postgres using GUI PgAdmin
+1) Open PgAdmin
+2) Enter the admin user password (postgres)
+3) server ->  postgresql12 -> Databases -> postgres -> schema->public -> table
+4) Create a new table using GUI
+5) Insert sample data by Insert Query
+6) Execute "Select" Query
+
+
+
+
+CREATE TABLE public.student
+(
+    id serial,
+    name character varying(75),
+    mobile bigint,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE public.student
+    OWNER to postgres;
+
+
+Accessing Postgres using Command Line Client (psql)
+
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+psql (12.7)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# \dt
+          List of relations
+ Schema |  Name   | Type  |  Owner
+--------+---------+-------+----------
+ public | student | table | postgres
+(1 row)
+
+
+postgres=# select * from student;
+ id |   name   |   mobile
+----+----------+------------
+  1 | student1 | 9944159844
+(1 row)
+
+
+postgres=#
+
+
+
+https://www.javatpoint.com/java-tutorial
+https://www.w3schools.com/java/default.asp
+
+
+
+
+
+
+
+Banking Application API
+Description
+The Banking App API is a Server-side application that facilitates the management of Client's Bank Accounts. A client create new accounts of various categories. Clients can deposit or withdraw funds from the account as well as close out accounts.
+
+Purpose
+We want to see that you can meet deadlines and that you can code. You are expected to complete the following requirements and give a 5 minute presentation of your project to our QC team.
+
+Requirements
+All endpoints listed below must have a Postman test verifying functionality
+Data is stored in a database.
+Data Access is performed through the use of Data Access Objects.
+All input is sent from a client (Postman) and handled by the Server
+Logging is implemented throughout the application
+All DAO and Service methods must have a test proving that they work
+RESTful Endpoints:
+POST /clients => Creates a new client return a 201 status code
+
+GET /clients => gets all clients return 200
+
+GET /clients/10 => get client with id of 10 return 404 if no such client exist
+
+PUT /clients/12 => updates client with id of 12 return 404 if no such client exist
+
+DELETE /clients/15 => deletes client with the id of15 return 404 if no such client exist return 204 if success
+
+POST /clients/5/accounts =>creates a new account for client with the id of 5 return a 201 status code
+
+GET /clients/7/accounts => get all accounts for client 7 return 404 if no client exists
+
+GET /clients/7/accounts?amountLessThan=2000&amountGreaterThan400 => get all accounts for client 7 between 400 and 2000 return 404 if no client exists
+
+GET /clients/9/accounts/4 => get account 4 for client 9 return 404 if no account or client exists
+
+PUT /clients/10/accounts/3 => update account with the id 3 for client 10 return 404 if no account or client exists
+
+DELETE /clients/15/accounts/6 => delete account 6 for client 15 return 404 if no account or client exists
+
+PATCH /clients/17/accounts/12 => Withdraw/deposit given amount (Body: {"deposit":500} or {"withdraw":250} return 404 if no account or client exists return 422 if insufficient funds
+
+PATCH /clients/12/accounts/7/transfer/8 => transfer funds from account 7 to account 8 (Body: {"amount":500}) return 404 if no client or either account exists return 422 if insufficient funds
+
+
+
+
+
+
+
+

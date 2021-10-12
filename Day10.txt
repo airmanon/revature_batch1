@@ -1,0 +1,230 @@
+
+https://revature.zoom.us/rec/share/tUhVuL5IxWQcYdpDXSMOgsc24DrKlPmWqrny3RajpWfpXPeq3471XUhmm4UF5DdG.RKoYo52Ns2CD3yz4 Passcode: #dQ2?eMB
+
+
+Servlets --- Server Side Code
+(This code will be execute in server)
+
+
+JAVA SE -- Stand-alone JAVA Application/Project  -- JVM
+Thread, ExceptionHandling, GUI, IO, Collections, Generics, OOPs concepts, 
+JDBC, Locale, I18N, Data, Time, File, Annotations, ...
+
+Web based Project -- Client-server based
+
+Client -- Browser 
+Server - Web/Application Server 
+
+
+JEE Project (Java Enterprise Edition)
+Servlet - Web/App Server is needed to run servlet
+
+Web Server -- Apache Tomcat  (Servlets, JSP, JSF)  -- tomcat 8.5 
+Application Server -- JBoss 
+
+
+
+
+Servlet - Java Class which will execute in the server 
+
+Apache tomcat -
+
+
+
+
+Dynamic Web Project
+
+
+Creating a Dynamic Web Project in Eclipse 
+File->New->others   (search for dynamic) -> dynamic web project
+
+
+web.xml -- mandatory for jdk < 1.5
+web.xml --- deployment descriptor  (optional)  - dynamic web project  JDK >1.5
+
+
+
+
+Associates
+
+   Trainings
+
+      Assessment
+
+
+Associates
+
+id
+name
+email
+mobile
+address
+username
+password
+
+CREATE TABLE `revature`.`associates` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(75) NOT NULL,
+  `email` VARCHAR(75) NOT NULL,
+  `mobile` BIGINT(10) NULL,
+  `address` VARCHAR(150) NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO `revature`.`associates` (`name`, `email`, `mobile`, `address`, `username`, `password`) VALUES ('siva', 'siva@gmail.com', '9944159844', 'chennai', 'siva123', 'siva123');
+INSERT INTO `revature`.`associates` (`name`, `email`, `mobile`, `address`, `username`, `password`) VALUES ('bhuvi', 'bhuvi@gmail.com', '8903189371', 'chennai', 'bhuvi123', 'bhuvi123');
+
+
+
+
+Training 
+   id
+  technology_id
+ name
+  duration
+  startDate
+  testDate (calculatedField)
+
+CREATE TABLE `revature`.`training` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `technology_id` INT NULL,
+  `duration` INT NULL,
+  `start_date` DATE NULL,
+  `test_date` DATE NULL,
+  PRIMARY KEY (`id`),
+  INDEX `trng_fk_idx` (`technology_id` ASC) VISIBLE,
+  CONSTRAINT `trng_fk`
+    FOREIGN KEY (`technology_id`)
+    REFERENCES `revature`.`technology` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+COMMENT = '	';
+
+
+ALTER TABLE `revature`.`training` 
+ADD COLUMN `name` VARCHAR(45) NOT NULL AFTER `test_date`;
+
+
+INSERT INTO `revature`.`training` (`technology_id`, `duration`, `start_date`, `name`) VALUES ('1', '11', '2021-09-27', 'Java Full Stack');
+INSERT INTO `revature`.`training` (`technology_id`, `duration`, `start_date`, `name`) VALUES ('9', '10', '2021-09-27', '.Net Full Stack');
+
+
+
+Assessment
+  id
+  training_id
+  technology_id
+  score 
+  assessment_date
+  result (calculated field) 
+  associate_id
+
+
+CREATE TABLE `revature`.`assessment` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `training_id` INT NULL,
+  `technology_id` INT NULL,
+  `associate_id` INT NULL,
+  `assessment_date` DATE NULL,
+  `score` VARCHAR(45) NULL,
+  `result` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk1_idx` (`training_id` ASC) VISIBLE,
+  INDEX `fk2_idx` (`technology_id` ASC) VISIBLE,
+  INDEX `fk3_idx` (`associate_id` ASC) VISIBLE,
+  CONSTRAINT `fk1`
+    FOREIGN KEY (`training_id`)
+    REFERENCES `revature`.`training` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk2`
+    FOREIGN KEY (`technology_id`)
+    REFERENCES `revature`.`technology` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk3`
+    FOREIGN KEY (`associate_id`)
+    REFERENCES `revature`.`associates` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+INSERT INTO `revature`.`training` (`technology_id`, `duration`, `start_date`, `name`) VALUES ('1', '11', '2021-09-27', 'Java Full Stack');
+INSERT INTO `revature`.`training` (`technology_id`, `duration`, `start_date`, `name`) VALUES ('9', '10', '2021-09-27', '.Net Full Stack');
+
+
+ 
+
+Technology
+  id 
+  name
+  category (front_end,back_end,db,server,tool, devops,ci/cd)
+
+CREATE TABLE `revature`.`technology` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(75) NOT NULL,
+  `category` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('HTML', 'front end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('CSS', 'front end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('JS', 'front end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('Spring', 'back end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('Java', 'back end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('Hibernate', 'back end');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('Tomcate', 'server');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('Oracle', 'database');
+INSERT INTO `revature`.`technology` (`name`, `category`) VALUES ('MySQL', 'database');
+
+
+
+
+https://dzone.com/articles/adding-slf4j-your-maven
+
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.revature</groupId>
+	<artifactId>trainingmanagement</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>trainingmanagement</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<slf4jVersion>1.7.30</slf4jVersion>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4jVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4jVersion}</version>
+		</dependency>
+	</dependencies>
+</project>
+
+
+
