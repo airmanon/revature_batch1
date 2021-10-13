@@ -1,0 +1,176 @@
+P0 Form - https://forms.gle/8W3CYUbfKWdfFgcYA
+
+
+INSERT INTO `revature`.`associates` (`name`, `email`, `mobile`, `address`, `username`, `password`) VALUES ('test', 'test@gmail.com', '8978675645', 'Hyderabad', 'test123', 'test123');
+INSERT INTO `revature`.`associates` (`name`, `email`, `mobile`, `address`, `username`, `password`) VALUES ('abc', 'abc@gmail.com', '7889674523', 'Delhi', 'abc123', 'abc123');
+INSERT INTO `revature`.`associates` (`name`, `email`, `mobile`, `address`, `username`, `password`) VALUES ('xyz', 'xyz@gmail.com', '9878897856', 'Goa', 'xyz123', 'xyz123');
+
+
+select a1.name, a1.mobile, a2.score from associates a1 INNER JOIN  assessment  a2 ON a1.id = a2.id;
+
+
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+RDBMS -- Relations Theory (Maths)
+
+INNER JOIN
+LEFT OUTER
+RIGHT OUTER
+FULL OUTER JOIN
+
+
+
+NORMALIZATION
+
+1NF - First Degree Normalization Form (atomic value)
+2NF - Second
+3NF - Third
+BCNF - Fourth (Boyce-codd) Degree Normal Form
+
+
+
+Banking
+customer_id account_id  customer_name account_type account_balance interest_rate transaction_type transaction_Date
+
+
+Redundancy 
+
+
+PL/SQL
+
+Programming Logic in SQL
+
+Stored_Porcedure
+
+Function
+
+
+
+Trigger & Sequence
+
+
+Trigger will be called automatically
+
+
+1) BEFORE INSERT
+2) AFTER INSERT 
+3) BEFORE UPDATE
+4) AFTER UPDATE
+5) BEFORE DELETE
+6) AFTER DELETE 
+
+
+https://www.javatpoint.com/mysql-create-trigger
+
+Create Trigger before_insert_empworkinghours   
+BEFORE INSERT ON employee FOR EACH ROW  
+BEGIN  
+IF NEW.working_hours < 0 THEN SET NEW.working_hours = 0;  
+END IF;  
+END //  
+
+
+
+BEGIN
+
+END
+
+
+
+
+IN - Input Variable
+
+OUT - Output Variable
+IN/OUT - Input & Output Variable
+
+
+
+
+
+HTML - Hyper Text Markup Lang
+tag based lang
+
+tag - a command enclosed in angular brackets <html>  </html>
+
+Most of the HTML tags, will have a opening & closing tag 
+
+<br/> <hr/> <input /> --- Self closing tags
+
+<marque>  
+
+<html>
+<head>
+  <title> </title>
+</head>
+<body>
+ <table> </table>
+<form> </form>
+<img >
+<a> </a>
+
+</body>
+</html> 
+
+
+HTML is case & space in-sensitive 
+
+UTF - Unicode Text Format
+
+
+
+HTML Element -- html opening & Closing tag along with the content in between
+
+
+1) HTML Rendering Engine
+2) Styling Engine 
+3) Scripting Engine 
+
+
+
+1) Pair of Tags & Self-closing Tag
+2) Block Level Tag (div) & Inline Tag  (span)
+
+
+Each tag will have attributes (meta data - which provide more detail to that particular tag)
+
+id = unique
+
+<input type="
+
+
+&nbsp;  -- Non-blocking Space (HTML Entity)
+
+&copy;
+
+&lt;
+
+&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

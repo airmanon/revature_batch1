@@ -1,0 +1,108 @@
+Responsive Web /Reponsive Design
+
+Adjusting the content according to the screen size.
+
+screen size 2" - 100" 
+
+Responsive Design 
+
+
+Bootstrap -- Mobile first Approach
+
+CDN - Content Delivery Network 
+
+
+Using Bootstrap
+1) Download as a zip and add it to the project manually
+2) Adding the CDN URL in the Page
+3) Using NPM
+
+
+Pre-defined Components, class selector
+
+CSS - Cascading Style Sheet 
+
+1) In-line Styling (by using the style attribute )
+2) Internal Style (by using style tag)
+3) External file (style.css) 
+
+
+
+Selectors 
+1) Simple element Selector ( name, id, class) [ html tag, #, .]
+2) Combinator selectors (select elements based on a specific relationship between them)
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+3)Pseudo-class selectors (select elements based on a certain state)
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+4)Psudo-elements selectors (select and style a part of an element)
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+5)Attribute selectors (select elements based on an attribute or attribute value)
+a[target="_blank"] {
+  background-color: yellow;
+}
+
+
+
+Javalin - light weight web framework
+
+
+Mockito  -- Testing framework
+
+
+
+
+TDD - Test Driven Development  (JUnit) -- Doing the Unit Testing (Modules, Controller, Testing Service)
+
+You will write the Test case first 
+It will fail (bcos no code to test)
+Write the code to make the test pass
+then enhance it
+
+
+BDD - Behaviour Driven Development (Mockito) -- Mocking Object
+
+ Dummy objects for Test - -Mock objects
+
+
+
+Unit Testing  (Positive test case , negative test case, test Suite)
+
+@Test, @BeforeAll, @AfterAll, @BeforeEach,@AfterEach
+AssertTrue
+AssertFalse
+AssertEquals
+AssertNull
+AssertNotNull
+
+Mockito
+
+Stub,Fake, Mock  - Objects
+when(), mock(), verify(), spy()
+doAnswer(), doNothing(), doCallRealMethod()
+
+
+
+https://www.javatpoint.com/examples-of-mockito-and-junit-in-eclipse-ide
+
+
+
+
+
+
+1) using maven
+2) export feature of the IDE
+
+
+
+
+
