@@ -1,3 +1,7 @@
+package com.syskan;
+
+import java.io.Console;
+
 public class SecurityCheckerMain {
 
     static String enteredPassword;

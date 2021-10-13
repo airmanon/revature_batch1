@@ -1,3 +1,4 @@
+package com.syskan;
 public class Checker {
 
     //number of chars : the Higher the Better("password must be greater than 8 chars"){done}
