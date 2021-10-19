@@ -1,0 +1,304 @@
+JS Function
+Promises
+
+Javalin 
+
+WebService - Spring Boot 
+Spring Data JPA
+h2/mysql/postgre
+web
+devtools
+
+application.properties
+
+
+
+JS Functions
+
+syntax :
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+
+
+
+function add(a,b){
+    return (a+b);
+}
+
+console.log(add(7,8));
+
+
+
+js uses "pass by value" for primitives 
+
+js uses "pass by " for objects
+
+
+
+Employee emp = new Employee();
+ left hand side , obj reference != Object
+
+objReference will have address of the Object
+
+
+public class Employee {
+  private int id;   -- 4 bytes
+  private int marks; -- 4 bytes 
+}
+
+
+Self - Invoking Functions / IIFE Functions
+A self - invoking function is an anonymous function that is invoked immediately after its definition.It is also known as the IIFE(Immediately Invoked Function Expression) function.It holds an anonymous function inside a set of parentheses(), which does the execution.
+
+    Syntax : (function () { code goes here... })();
+
+Example:
+
+
+(function () {
+    // do this right now
+    console.log("Look at me, I'm running");
+})();
+
+
+
+Hoisting of Functions:
+
+JavaScript compiler moves the function definition to the top in the same way as a variable declaration.
+
+Example:
+
+alert(Sum(5, 5)); // output: 10
+
+function Sum(val1, val2)
+{
+    return val1 + val2;
+}
+Javascript compiler moves only the Function declaration to the top, not the function expression.
+
+Example:
+
+add(5, 5); // Results an error
+
+var add = function sum(a, b)
+{
+    return a+b;
+}
+Hoisting Functions Before Variables:
+
+JavaScript compiler moves a function's definition before the variable declaration.
+
+Example:
+
+alert(UseMe); // displays the UseMe Function definition 
+
+var UseMe = "UseMe Variable";
+
+function UseMe()
+{            
+    alert("UseMe function called");
+}
+The above example will display "UseMe" function definition because JavaScript compiler moves the function before variables.Therefore, the alert box displays function UseMe() { alert("UseMe function called");}.
+
+NOTE: The above code doesn't display "UseMe Variable" in the alert box due to hoisting functions before variables.
+
+
+
+https://reqres.in/
+
+
+https://reqres.in/api/users?page=1   -- GET
+
+
+
+
+Fetch API
+Instead of using XMLHttpRequest enabled Ajax, we can use Fetch API, which is modern and versatile. The Fetch API provides a fetch() method defined on the window object. This method used to send requests and returns a Promise that retrieved from the response. A Promise object represents a value that may not be available now but, will be resolved in the future. It allows us to write asynchronous code.
+
+The syntax for fetch() method: let promise = fetch(url, [options])
+
+The browser requests the server and returns a promise as a response. When the request unable to make HTTP-request due to network problems or response has failure HTTP-status code is 404 or 500, then the Fetch API rejects the Promise object. When we get a response successfully form the server, the promise object returned in the Response Body.
+
+The methods to access the response body in various formats:
+
+response.text() – read the response and return as text.
+response.json() – parse the response as JSON.
+response.formData() – return the response as FormData object .
+response.blob() – return the response as Blob (binary data with type).
+response.arrayBuffer() – return the response as ArrayBuffer(low-level representation of binary data).
+We also use the async and await keyword with the fetch() method. The async keyword is added to functions to tell them to return a promise rather than directly returning the value. The await keyword only works inside async functions, used to pause the code on that line until promise gets complete.
+
+Example:
+
+async function asyncFunc() {
+  let response = await fetch(protectedUrl);
+  let text = await response.text(); // response body consumed
+  document.write(text);
+}
+
+asyncFunc();
+Response headers - The response headers are available in a Map-like headers object in response.headers. To get individual headers by name or iterate over them.
+
+Example:
+
+async function asyncFunc() {
+  let response = await fetch(githubUrl);
+
+  // get one header
+  alert(response.headers.get('Content-Type')); // application/json; charset=utf-8
+
+  // iterate over all headers
+  for (let [key, value] of response.headers) {
+    alert(`${key} = ${value}`);
+  }
+}
+
+asyncFunc();
+Request headers - To set a request header inside the fetch method, we can use the headers attribute.
+
+Example:
+
+let response = fetch(protectedUrl, {
+  headers: {
+    Authentication: 'secret'
+  }
+});
+POST Request:
+
+To make a POST request, we need to mention the HTTP method (method)and request the body (body) inside the fetch method. The request body can be string, FormData object, or blob. If the request body is a string, then Content-Type header is set to text/plain;charset=UTF-8. If the request body is a JSON, then Content-Type header is set to application/json;charset=UTF-8. We don't set Content-Type manually for blob object.
+
+Example:
+
+async function asyncFunc() {
+  let user = {
+    name: 'John',
+    surname: 'Smith'
+  };
+  // url is a server location 
+  let response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(user)
+  });
+
+  let result = await response.json();
+  alert(result.message);
+}
+
+asyncFunc();
+Handling Errors
+The Fetch API generates a promise, meaning that if the request fails, it will cause the promise to enter the reject state. To handle this, we need to either surround our await instruction with a try...catch block or to append a catch() callback to our promise.
+
+Example:
+
+async function asyncFunc() {
+  let user = {
+    name: 'John',
+    surname: 'Smith'
+  };
+  // url is a server location 
+  let response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: JSON.stringify(user)
+  });
+  try {
+    let result = await response.json();
+    alert(result.message);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+asyncFunc();
+Example:
+
+let user = {
+  name: 'John',
+  surname: 'Smith'
+};
+// url is a server location 
+let response = fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(user)
+}).then((response)=>{
+  let result = response.json();
+  alert(result.message);
+}).catch((error)=>{
+  console.error(error);
+});
+
+
+
+
+utf -- Unicode Text Format
+
+ASCII Format -- American Standard Code for Information Interchange (1 Byte - 8 bits)
+Unicode Format - 2 Bytes (16 bits)
+
+8 boxex - 2^8 - (0-255) [52,10, 10] 
+
+
+Chineese, Japanese, Tamil  - 247
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+
+Promises
+Promises are used to handle asynchronous operations in JavaScript.
+
+The constructor syntax for a promise object is:
+
+let promise = new Promise(function(resolve, reject) {
+  // executor (the producing code, "singer")
+});
+The function passed to new Promise is called the executor. When a promise object is created, the executor runs automatically. It contains the code which produces the result. The arguments resolve and reject are callbacks.
+
+When the executor obtains the result, it should call one of these callbacks:
+
+resolve(value) — if the job finished successfully, with the result value.
+reject(error) — if an error occurred, the error is the error object.
+The Promise.status property, gives information about the state of the Promise object. The promise object can have three states: pending, fulfilled, and rejected.
+
+A Promise object connects the executor and the consuming functions which will receive the result or error. Consuming functions can be registered using methods .then, .catch and .finally.
+
+Example:
+
+var promise = new Promise(function(resolve, reject) { 
+  const x = 5; 
+  const y = 3;
+  if(x >= y) { 
+    resolve(); 
+  } else { 
+    reject(); 
+  } 
+}); 
+  
+promise. 
+    then(function () { 
+        console.log('Sucess! x have grater value'); 
+    }). 
+    catch(function () { 
+        console.log('Error'); 
+    }); 
+
+
+
+
+https://www.e4developer.com/2018/04/26/java-websockets-made-simple-with-javalin/
+
+
+
+
