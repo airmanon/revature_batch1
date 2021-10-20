@@ -1,0 +1,128 @@
+enter RDS
+
+
+
+create Database (next to $3)
+
+
+
+Standard create
+
+
+
+PostgreSQL
+
+
+
+Free tier
+
+
+
+Master username -> leave as (postgres)
+
+
+
+Master password -> passwordhere
+
+
+
+DB instance size -> leave as is
+
+
+
+Storage type
+
+
+
+General purpose (ssd)
+
+
+
+Allocated storage -> 20 GiB (and remember to turn off storage autoscaling!!!)
+
+
+
+Choose Default VPC
+
+
+
+Subnet group -> leave as (default)
+
+
+
+public access info -> choose (YES)
+
+
+
+Existing VPC security groups -> choose (default)
+
+
+
+Availablity -> no preference
+
+
+
+Additional Config -> TCP/IP Database port leave as (5432)
+
+
+
+Database Authentication -> leave as (password authentication)
+
+
+
+Additional config
+
+
+
+Database options -> initial database name -> enter (postgres)
+
+
+
+DB parameter group -> leave default
+
+
+
+Backup -> disable
+
+
+
+performance insights -> disable
+
+
+
+Maintenance -> leave it on or off is fine
+
+
+
+Maintenance window -> leave as no preference
+=====================================
+Dbeaver setup
+
+
+
+Connection settings
+
+
+
+fill out host (endpoint on aws, just copy paste), database (2nd name) , username (same as aws), password (same as aws)
+
+
+
+====================================
+1 inbound rule + 1 outbound rule
+
+
+
+postgreSQL inbound rule (type)
+
+
+
+Source -> My IP -> autofill
+
+
+
+postgreSQL -> outbound rule (type)
+
+
+
+Source -> My IP -> autofill
