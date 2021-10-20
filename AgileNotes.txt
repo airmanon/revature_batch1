@@ -1,0 +1,12 @@
+Agile
+
+Development Process - strategy of how to develop a project
+
+Waterfall problems:
+	1. It doesn't account for changes in demand later in development
+	2. customers won't get feedback for a while
+
+Spiral - iterates
+
+Agile benefits:
+	1. being able to get feedback from customer quickly because you always have something to present
