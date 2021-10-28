@@ -50,6 +50,7 @@ public class App {
 			logger.info("This the student object from postman :" + stu);
 			StudentDAO.save(stu);
 			ctx.status(201);
+			ctx.redirect("students.html");
 		});
 
 		app.get("studentForm", ctx -> ctx.redirect("addStudent.html"));
@@ -64,6 +65,7 @@ public class App {
 			logger.info("This the student object from postman :" + stu);
 			StudentDAO.save(stu);
 			ctx.status(201);
+			ctx.redirect("students.html");
 		});
 
 		app.put("students/{id}", ctx -> {
@@ -71,12 +73,14 @@ public class App {
 			Student stu = ctx.bodyAsClass(Student.class);
 			StudentDAO.update(id, stu);
 			ctx.status(200);
+			ctx.redirect("students.html");
 		});
 
 		app.delete("students/{id}", ctx -> {
 			int id = Integer.parseInt(ctx.pathParam("id"));
 			StudentDAO.delete(id);
 			ctx.status(200);
+			ctx.redirect("students.html");
 		});
 
 		List<Course> courses = CourseDAO.findAll();
@@ -94,6 +98,22 @@ public class App {
 //			logger.info("This the student object from postman :" + stu);
 			CourseDAO.save(cour);
 			ctx.status(201);
+			ctx.redirect("courses.html");
+		});
+		
+		app.get("courseForm", ctx -> ctx.redirect("addCourse.html"));
+
+		app.post("courseForm", ctx -> {
+
+			String name = ctx.formParam("name");
+			String category = ctx.formParam("category");
+			
+			int duration = Integer.parseInt(ctx.formParam("duration"));
+			Course course = new Course(name, category, duration);
+			logger.info("This the Course object from postman :" + course);
+			CourseDAO.save(course);
+			ctx.status(201);
+			ctx.redirect("courses.html");
 		});
 
 		app.put("course/{id}", ctx -> {
@@ -101,12 +121,14 @@ public class App {
 			Course cour = ctx.bodyAsClass(Course.class);
 			CourseDAO.update(id, cour);
 			ctx.status(200);
+			ctx.redirect("courses.html");
 		});
 
 		app.delete("course/{id}", ctx -> {
 			int id = Integer.parseInt(ctx.pathParam("id"));
 			CourseDAO.delete(id);
 			ctx.status(200);
+			ctx.redirect("courses.html");
 		});
 
 	}
