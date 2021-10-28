@@ -20,6 +20,13 @@ public class Course {
 		super();
 	}
 
+	public Course(String name, String category, int duration) {
+		super();
+		this.name = name;
+		this.category = category;
+		this.duration = duration;
+	}
+
 	public Course(int id, String name, String category, int duration) {
 		super();
 		this.id = id;
