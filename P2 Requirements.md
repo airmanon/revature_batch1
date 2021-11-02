@@ -1,6 +1,6 @@
 
-Project 2
-Overview
+# Project 2
+# Overview
 Project 2 should be a small full stack application using frameworks (Angular & Spring Boot ). Associates should choose a p2 idea of their own. They should use BDD to design the application and test it.
 Testing Requirements
 •	All endpoints should be tested with Postman
@@ -18,27 +18,27 @@ Goals
 •	Associates should learn how to create basic testing documents
 
 
-Front End: 
+# Front End: 
 Angular APP (SPA)
 Login Form (Component) – Login Validation (with backend data) – Rest end point (http client)
 Home Page Component (Event Details related to this particular client) - CRUD
 
 
-Backend:
+# Backend:
 Spring Boot (Restful Webservice)
 
-DB Layer:
+# DB Layer:
 Postgres running on AWS RDS 
 
 
-Testing
+# Testing
 Junit
 Mockito
 Selenium IDE Test
 Cucumber BDD
 Jasmine, Karma & Protractor (SPA)
 
-Team (Max Size: 3)
+# Team (Max Size: 3)
 Scrum Master (1)
 Scrum Team (2) 
 
